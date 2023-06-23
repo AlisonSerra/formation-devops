@@ -11,13 +11,14 @@ on:
 
 jobs:
   
-  test:
+  deployment:
+    name: Node.js CI
+    runs-on: unbuntu-latest
 
     steps:
     - uses: actions/setup-node@v3
       with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
+        node-version: '16'
     - uses: actions/checkout@v3
 
     - name: Install Dependencies
